@@ -171,13 +171,82 @@
     </section>
 
     <section>
-      <h2>architecture</h2>
-      <img
-          src="./examples/assets/Architecture.png"
-          width="900"
-          height="450"
-          alt="Vue-icon"
-      />
+      <section>
+        <h2>architecture</h2>
+        <img
+            src="./examples/assets/Architecture.png"
+            width="900"
+            height="450"
+            alt="Vue-icon"
+        />
+      </section>
+      <section>
+        <h2><span style="color: #209cff">React</span></h2>
+
+        <pre>
+        <code>
+            import React, {useState} from "react";
+            const MyComponent = () => {
+                const [value, setValue] = useState(1);
+                return (
+                    <div>
+                        <p>{value}</p>
+                        <button onClick={() => setValue((value + 1))}>Increment Value</button>
+                    </div>
+                );
+            };
+        </code>
+      </pre>
+      </section>
+
+      <section>
+        <h2><span style="color: #3ea721">Vue</span></h2>
+        <pre>
+        <code>
+            <script>
+            export default {
+              data() {
+                return {
+                  greeting: 'Hello World!'
+                }
+              }
+            }
+            </script>
+
+            <template>
+              <p class="greeting">{{ greeting }}</p>
+            </template>
+
+            <style>
+            .greeting {
+                color: red;
+                font-weight: bold;
+            }
+            </style>
+        </code>
+      </pre>
+      </section>
+
+      <section>
+        <h2><span style="color: #d91122">Angular</span></h2>
+        <pre>
+          <code>
+            import { NgModule }      from '@angular/core';
+            import { BrowserModule } from '@angular/platform-browser';
+            import { FormsModule }   from '@angular/forms';
+            import { AppComponent }   from './app.component';
+
+            @NgModule({
+                imports:      [ BrowserModule, FormsModule ],
+                declarations: [ AppComponent ],
+                bootstrap:    [ AppComponent ],
+                exports:      [ ],
+                providers:    [ ]
+            })
+            export class AppModule { }
+          </code>
+        </pre>
+      </section>
     </section>
 
     <section data-background="http://i.giphy.com/90F8aUepslB84.gif" class="present" data-fragment="1">
