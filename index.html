@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>React vs VUE vs Angular</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section style="top: 0px; display: block;"  class="present">
+      <img
+          style="border-radius: 10px"
+          src="./examples/assets/choiсe.png"
+          width="900"
+          height="450"
+          alt="choice image"
+      />
+    </section>
+
+    <section>
+      <section>
+        <h2>Main stats</h2>
+        <img
+            src="./examples/assets/Stats1.png"
+            width="900"
+            height="250"
+            alt="Vue-icon"
+        />
+      </section>
+      <section>
+        <h2>Download statistics:</h2>
+        <img
+            src="./examples/assets/Downloads1.png"
+            width="900"
+            height="450"
+            alt="Vue-icon"
+        />
+      </section>
+    </section>
+
+    <section>
+      <table>
+        <thead>
+        <tr>
+          <th></th>
+          <th><span style="color: #209cff">React</span></th>
+          <th><span style="color: #d91122">Angular</span></th>
+          <th><span style="color: #3ea721">Vue</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><span style="color: #ba590f">it's</span></td>
+          <td>library (still)</td>
+          <td>framework</td>
+          <td>framework</td>
+        </tr>
+        <tr>
+          <td><span style="color: #ba590f">syntax</span></td>
+          <td>JS / JSX</td>
+          <td>own</td>
+          <td>HTML-like</td>
+        </tr>
+        <tr>
+          <td><span style="color: #ba590f">architecture</span></td>
+          <td>functional components</td>
+          <td>classes (MVC)</td>
+          <td>components (ViewModel)</td>
+        </tr>
+        <tr>
+          <td><span style="color: #ba590f">best for</span></td>
+          <td>WEB-APP, Native apps for IOS, Android</td>
+          <td>large apps with rich functionality</td>
+          <td>WEB-APP, SPA</td>
+        </tr>
+        <tr>
+          <td><span style="color: #ba590f">entry threshold</span></td>
+          <td><span style="color: yellow">middle</span></td>
+          <td><span style="color: red">hard</span></td>
+          <td><span style="color: green">light</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Code Examples</h2>
+      <section>
+        <h3>React</h3>
+
+      <pre>
+        <code>
+            const array = [
+              { name: "Tim", age: 27 },
+              { name: "Bob", age: 32 }
+          ];
+
+            const App = () => (
+              <>
+                {array.map((item, index) => (
+                  <div key={index}>
+                    <div>Name: {item.name}</div>
+                    <div>Age: {item.age}</div>
+                  </div>
+                ))}
+              <\/>
+            );
+        </code>
+      </pre>
+        </section>
+
+      <section>
+      <h3>Vue</h3>
+      <pre>
+        <code>
+          <ul id="example-2">
+            <li v-for="(item, index) in items">
+              {{ parentMessage }} - {{ index }} - {{ item.message }}
+            </li>
+          </ul>
+          var example2 = new Vue({
+            el: '#example-2',
+            data: {
+              parentMessage: 'Parent',
+              items: [
+                { message: 'Foo' },
+                { message: 'Bar' }
+              ]
+            }
+          })
+        </code>
+      </pre>
+        </section>
+
+      <section>
+      <h3>Angular</h3>
+      <pre>
+        <code>
+        @Component({
+          selector: 'ngfor-example',
+          template: `
+         <ul>
+          <li *ngFor="let person of people"> (1)
+            {{ person.name }}
+          </li>
+         </ul>
+         `
+        })
+        class NgForExampleComponent {
+          people: any[] = [
+            {
+              "name": "Douglas  Pace"
+            },
+            {
+              "name": "Cook  Tyson"
+            }
+          ];
+        }
+        </code>
+      </pre>
+        </section>
+    </section>
+
+    <section>
+      <h2>architecture</h2>
+      <img
+          src="./examples/assets/Architecture.png"
+          width="900"
+          height="450"
+          alt="Vue-icon"
+      />
+    </section>
+
+    <section data-background="http://i.giphy.com/90F8aUepslB84.gif" class="present" data-fragment="1">
+      <h2>Undeniable advantages <span style="color: #d90b23">(Angular)</span></h2>
+        <p class="fragment fade-right" data-fragment-index="0"><span style="color: #f3c40a; font-weight: bold">Dependency injections</span></p>
+        <p class="fragment fade-up" class="fragment visible" data-fragment-index="1"><span style="color: #29873d; font-weight: bold">Modules</span></p>
+        <p class="fragment fade-left" class="fragment visible" data-fragment-index="2"><span style="color: #131599; font-weight: bold">Observables</span></p>
+    </section>
+
+    <section data-background-image="https://t3.ftcdn.net/jpg/03/10/60/16/360_F_310601654_cSXlODxJK30Por1TGqKLeKQpNIHefkK8.jpg">
+      <h1 class="fragment fade-up" style="color: #5bdc0a; margin-top: 250px;">...</h1>
+    </section>
+
+    <section>
+      <h3>Pros & Cons</h3>
+      <div class="fragment fade-up" style="font-size: 20px">
+        <span style="color: #209cff">React</span>
+        <p>+ simple</p>
+        <p>+ huge community</p>
+        <p>- extra code</p>
+      </div>
+
+      <div class="fragment fade-up"  style="font-size: 20px">
+        <span style="color: #d91122">Angular</span>
+        <p>+ self-sufficient framework - a lot of built-in tools, can be used without additional libraries</p>
+        <p>+ easy testing</p>
+        <p>- learning curve is steep</p>
+        <p>- inflexible</p>
+      </div>
+
+      <div class="fragment fade-up"  style="font-size: 20px">
+        <span style="color: #3ea721">Vue</span>
+        <p>+ simple</p>
+        <p>+ thorough documentation</p>
+        <p>- limited community</p>
+        <p>- written by one developer</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color: #209cff; margin-top: 250px;">Thank you for attention =) </h2>
+    </section>
+  </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+  // More info about initialization & config:
+  // - https://revealjs.com/initialization/
+  // - https://revealjs.com/config/
+  Reveal.initialize({
+    hash: true,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
+</script>
+</body>
+</html>
